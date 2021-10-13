@@ -1,0 +1,28 @@
+{
+  "name": "redoc-try-it-out",
+  "version": "1.0.0",
+  "description": "Using Swagger UI Try It Out function on Redoc",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "lint": "eslint --config .eslintrc.json --ignore-path .eslintignore ./src/**/*.ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amorimjj/redoc-try-it-out.git"
+  },
+  "author": "amorimjj",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.5.6",
+    "@types/jquery.scrollto": "^1.4.29",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
