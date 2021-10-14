@@ -1,6 +1,6 @@
 {
   "name": "redoc-try-it-out",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Using Swagger UI Try It Out function on Redoc",
   "main": "dist/index.js",
   "scripts": {
@@ -13,6 +13,11 @@
     "url": "git+https://github.com/amorimjj/redoc-try-it-out.git"
   },
   "author": "amorimjj",
+  "keywords": [
+    "redoc",
+    "try it",
+    "swagger ui"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/jquery": "^3.5.6",
