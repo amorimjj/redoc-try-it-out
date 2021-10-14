@@ -19,8 +19,8 @@ export class RedocTryItOut {
     }
 
     private static async loadAll(): Promise<void[]> {
+        await RedocTryItOut.loadDependencies();
         return Promise.all([
-            RedocTryItOut.loadDependencies(),
             RedocWrapper.init(),
             SwaggerWrapper.init()
         ]);
