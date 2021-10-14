@@ -20,7 +20,7 @@
 [Available Options](#Available-options) |
 [Credits](#Credits) |
 [Changelog](#Changelog) |
-[ToDo](#ToDo)
+[ToDo](#TODO)
 
 </div>
 
