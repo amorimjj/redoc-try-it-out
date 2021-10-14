@@ -23,7 +23,7 @@ export class RedocWrapper {
 
     public static get $tryItBoxContainer(): JQuery {
         const $tryItBox = $(RedocWrapper.cfg.tryItBoxSelector);
-        return $tryItBox.length ? $tryItBox : $(`<div class="${RedocWrapper.cfg.tryItBoxClass}"></div>`);
+        return $tryItBox.length ? $tryItBox : $(`<div id="${RedocWrapper.cfg.tryItBoxContainerId}"></div>`);
     }
 
     private static moveTryApiContainer(): void {

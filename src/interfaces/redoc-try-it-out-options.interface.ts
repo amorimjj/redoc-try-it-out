@@ -4,7 +4,6 @@ import { TryBtnOptions } from './try-btn-options.interface';
 import {StyleMatcherOptions} from "./style-matcher-options.interface";
 
 export interface RedocOptions {
-  /** Version of ReDoc to use (e.g. next, latest, 2.0.0-rc.50), by default is latest */
   redocVersion?: string;
   /** Web site title (e.g: ReDoc documentation) */
   title?: string;
@@ -86,7 +85,7 @@ export interface DependenciesVersions {
 
 export interface RedocTryItOutOptions extends RedocOptions {
   tryItOutEnabled?: boolean;
-  tryItBoxClass?: string;
+  tryItBoxContainerId?: string;
   containerId?: string;
   operationBoxSelector?: string;
   selectedOperationClass?: string;

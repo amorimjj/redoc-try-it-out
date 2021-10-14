@@ -13,7 +13,7 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
     private readonly _operationBoxSelector: string = '[data-section-id]';
 
     public readonly tryItOutEnabled: boolean = true;
-    public readonly tryItBoxClass: string = 'swaggerShadow';
+    public readonly tryItBoxContainerId: string = 'try-out-wrapper';
     public readonly redocVersion: string = '2.0.0-rc.56';
     public readonly selectedOperationClass: string = 'try';
 
@@ -36,7 +36,7 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
     }
 
     public get tryItBoxSelector(): string {
-        return `.${this.tryItBoxClass}`;
+        return `#${this.tryItBoxContainerId}`;
     }
 
     public get version(): string {
