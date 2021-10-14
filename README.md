@@ -34,7 +34,7 @@
 
 ### Browser
 #### Script tag
-`<script src="https://cdn.jsdelivr.net/npm/redoc-try-out@1.0.0/dist/try-it-out.min.js"></script>`
+`<script src="https://cdn.jsdelivr.net/npm/redoc-try-out@latest/dist/try-it-out.min.js"></script>`
 
 ## How to use
 
@@ -210,6 +210,7 @@ It's based on [wll8.github.io/redoc-try](https://github.com/wll8/redoc-try) work
 Bellow are a list of changes, some might go undocumented
 
 - 1.0.0 - First release
+- 1.0.1 - Remove png from package
 
 ## TODO
 
