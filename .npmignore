@@ -1,0 +1,6 @@
+src/
+node_modules/
+.eslintignore
+.eslintrc.json
+tsconfig.json
+webpack.config.js
