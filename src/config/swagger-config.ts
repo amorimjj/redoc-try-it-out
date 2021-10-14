@@ -9,7 +9,7 @@ export class SwaggerConfig extends Config<SwaggerOptions> implements SwaggerOpti
 
     private readonly _authorizeBtnSelector: string = '.swagger-ui .auth-wrapper .authorize';
     private readonly _authorizeDoneBtnSelector: string = '.swagger-ui .auth-btn-wrapper .btn-done';
-    private readonly _authorizeModalCloseBtnSelector: string = '.swagger-ui .auth-btn-wrapper .btn-done, .swagger-ui .dialog-ux .modal-ux-header .close-modal';
+    private readonly _authorizeModalCloseBtnSelector: string = '.swagger-ui .dialog-ux .modal-ux-header .close-modal';
     private readonly _authorizeModalSelector: string = '.swagger-ui .dialog-ux .modal-ux';
     private readonly _modalOverlaySelector: string = '.swagger-ui .dialog-ux';
 
