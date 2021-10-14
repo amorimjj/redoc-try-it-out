@@ -19,7 +19,7 @@ export class SwaggerWrapper {
         return $(`${SwaggerWrapper.cfg.authorizeBtnSelector}`);
     }
 
-    private static get $authorizeModalCloseBtn(): JQuery {
+    private static get $authorizeModalCloseTriggers(): JQuery {
         return $(`${SwaggerWrapper.cfg.authorizeDoneBtnSelector}, ${SwaggerWrapper.cfg.authorizeModalCloseBtnSelector}`);
     }
 
@@ -64,7 +64,7 @@ export class SwaggerWrapper {
     }
 
     public static onCloseAuthModal(event: CallbackFunction): void {
-        SwaggerWrapper.$authorizeModalCloseBtn.click(event);
+        SwaggerWrapper.$authorizeModalCloseTriggers.click(event);
     }
 
     public static selectApiSection(api: string, method: string): void {
