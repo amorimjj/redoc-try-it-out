@@ -2,9 +2,11 @@
   "name": "redoc-try-it-out",
   "version": "1.0.4",
   "description": "Using Swagger UI Try It Out function on Redoc",
-  "main": "./dist/try-it-out.js",
+  "jsdelivr": "./dist/try-it-out.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "prepublishOnly": "npm run build",
+    "build": "webpack --mode production && tsc -p ./tsconfig.build.json",
     "lint": "eslint --config .eslintrc.json --ignore-path .eslintignore ./src/**/*.ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
