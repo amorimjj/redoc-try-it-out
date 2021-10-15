@@ -1,7 +1,7 @@
 import { AuthBtnOptions } from './auth-btn-options.interface';
 import { SwaggerOptions } from './swagger-options.interface';
 import { TryBtnOptions } from './try-btn-options.interface';
-import {StyleMatcherOptions} from "./style-matcher-options.interface";
+import { StyleMatcherOptions } from './style-matcher-options.interface';
 
 export interface RedocOptions {
   redocVersion?: string;
