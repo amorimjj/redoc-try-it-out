@@ -1,14 +1,19 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: './src/browser.ts',
     devtool: 'inline-source-map',
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
+                use: [{
+                    loader: 'ts-loader',
+                    options: {
+                        configFile: 'tsconfig.webpack.json'
+                    }
+                }],
+                exclude: /node_modules/
             },
         ],
     },
