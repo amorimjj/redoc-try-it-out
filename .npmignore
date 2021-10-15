@@ -1,8 +1,7 @@
 src/
 node_modules/
 .idea
-.eslintignore
-.eslintrc.json
-tsconfig.json
+.eslint*
+tsconfig*
 webpack.config.js
 redoc-try-out.png
