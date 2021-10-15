@@ -15,6 +15,7 @@
 </div>
 <div align="center">
 
+[Live Demo](#Live-demo) |
 [Installation](#Installation) |
 [How to use](#How-to-use) |
 [Available Options](#Available-options) |
@@ -30,11 +31,15 @@
     It's extends <a href="https://github.com/Redocly/redoc">Redoc</a> adding the <a href="https://swagger.io">Swagger's</a> <i>Try Out</i> feature.
 </p>
 
+## Live Demo
+
+Online preview [Pet Store](https://cdn.jsdelivr.net/npm/redoc-try-it-out/demo.html) live demo.
+
 ## Installation
 
 ### Browser
 #### Script tag
-`<script src="https://cdn.jsdelivr.net/npm/redoc-try-out@latest/dist/try-it-out.min.js"></script>`
+`<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/redoc-try-it-out/dist/try-it-out.min.js"></script>`
 
 ## How to use
 
@@ -211,7 +216,8 @@ Bellow are a list of changes, some might go undocumented
 
 - 1.0.0 - First release
 - 1.0.1 - Remove png from package
-- 1.0.1 - Fix main file
+- 1.0.2 - Fix main file
+- 1.0.3 - Add live demo and fix README
 
 ## TODO
 
