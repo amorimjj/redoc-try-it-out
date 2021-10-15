@@ -211,6 +211,7 @@ Bellow are a list of changes, some might go undocumented
 
 - 1.0.0 - First release
 - 1.0.1 - Remove png from package
+- 1.0.1 - Fix main file
 
 ## TODO
 
