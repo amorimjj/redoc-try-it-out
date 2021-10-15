@@ -1,7 +1,5 @@
-import { RedocTryItOut } from './module';
-
-declare global {
-    interface Window { RedocTryItOut: RedocTryItOut; }
-}
-
-window.RedocTryItOut = window.RedocTryItOut || RedocTryItOut;
+export * from 'interfaces/auth-btn-options.interface';
+export * from 'interfaces/redoc-try-it-out-options.interface';
+export * from 'interfaces/style-matcher-options.interface';
+export * from 'interfaces/swagger-options.interface';
+export * from 'interfaces/try-btn-options.interface';
