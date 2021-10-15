@@ -1,13 +1,10 @@
 {
   "name": "redoc-try-it-out",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Using Swagger UI Try It Out function on Redoc",
   "jsdelivr": "./dist/try-it-out.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "webpack --mode production && tsc -p ./tsconfig.build.json",
