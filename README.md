@@ -33,7 +33,7 @@
 
 ## Live Demo
 
-Online preview [Pet Store](https://cdn.jsdelivr.net/npm/redoc-try-it-out/demo.html) live demo.
+Online preview [Pet Store](https://amorimjj.github.io/redoc-try-it-out.html) live demo.
 
 ## Installation
 
@@ -218,6 +218,7 @@ Bellow are a list of changes, some might go undocumented
 - 1.0.1 - Remove png from package
 - 1.0.2 - Fix main file
 - 1.0.3 - Add live demo and fix README
+- 1.0.4 - Fix live demo page url
 
 ## TODO
 
