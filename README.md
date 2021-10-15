@@ -220,6 +220,7 @@ Bellow are a list of changes, some might go undocumented
 - 1.0.3 - Add live demo and fix README
 - 1.0.4 - Fix live demo page url
 - 1.0.5 - Export interfaces
+- 1.0.6 - Fix configuration
 
 ## TODO
 
