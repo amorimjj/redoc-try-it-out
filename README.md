@@ -222,6 +222,8 @@ Bellow are a list of changes, some might go undocumented
 - 1.0.5 - Export interfaces
 - 1.0.6 - Fix configuration
 - 1.0.7 - Fix exports
+- 1.0.8 - Fix redoc options
+- 1.0.9 - Export JS name files constants
 
 ## TODO
 
