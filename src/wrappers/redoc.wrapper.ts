@@ -41,10 +41,9 @@ export class RedocWrapper {
     }
 
     public static async init():Promise<void> {
-
         await loadScript(RedocWrapper.cfg.bundleUrl);
         const promise = new Promise<void>((resolve, reject): void => {
-            Redoc.init(RedocWrapper.cfg.docUrl, RedocWrapper.cfg, RedocWrapper.domElement, (e:Error) => e ? reject(e) : resolve());
+            Redoc.init(RedocWrapper.cfg.docUrl, RedocWrapper.cfg.options, RedocWrapper.domElement, (e:Error) => e ? reject(e) : resolve());
         });
 
         return promise;

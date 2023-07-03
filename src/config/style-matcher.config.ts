@@ -10,6 +10,7 @@ export class StyleMatcherConfig extends Config<StyleMatcherOptions> implements S
     private readonly swaggerConfig: SwaggerConfig;
     private readonly redocConfig: RedocTryItOutConfig;
 
+    public readonly tryItOutEnabled: boolean = false;
     private readonly _informationContainerTargetSelector: string    = '.swagger-ui .information-container';
     private readonly _schemeContainerTargetSelector: string         = '.swagger-ui .scheme-container';
     private readonly _modelsContainerTargetSelector: string         = '.swagger-ui .models';
@@ -91,6 +92,7 @@ export class StyleMatcherConfig extends Config<StyleMatcherOptions> implements S
         super(cfg);
         this.swaggerConfig = swaggerConfig;
         this.redocConfig = redocConfig;
+        this.tryItOutEnabled = cfg.tryItOutEnabled;
     }
 
     public get openedInformationContainerTargetSelector(): string {

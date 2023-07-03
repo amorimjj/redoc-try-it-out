@@ -23,13 +23,14 @@ export class AuthBtn {
 
     public static init(): void {
 
-        if ( ! SwaggerWrapper.hasAuth ) {
+        if ( ! SwaggerWrapper.hasAuth || !AuthBtn.cfg.tryItOutEnabled) {
             return;
         }
 
         const $authBtn = $(`<div class="${AuthBtn.cfg.className}">${AuthBtn.cfg.text}</div>`);
-        $authBtn.click(authClickHandler);
+        $authBtn.click(authClickHandler);    
         $(AuthBtn.cfg.posSelector).after($authBtn);
         SwaggerWrapper.onCloseAuthModal(authCloseClickHandler);
+
     }
 }
