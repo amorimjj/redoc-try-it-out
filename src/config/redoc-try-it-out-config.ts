@@ -17,7 +17,7 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
 
     public tryItOutEnabled = false;
     public tryItBoxContainerId = 'try-out-wrapper';
-    public redocVersion = '2.0.0-rc.56';
+    public redocScriptUrl = this.cdnUrl + '/redoc@2.0.0-rc.56/bundles/redoc.standalone.min.js';
     public selectedOperationClass = 'try';
     public options: RedocTryItOutOptions = {};
     public tryBtn: TryBtnOptions = { tryItOutEnabled: false };
@@ -35,7 +35,7 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
 
         if (cfg.tryItOutEnabled) { this.tryItOutEnabled = cfg.tryItOutEnabled }
         if (cfg.tryItBoxContainerId) { this.tryItBoxContainerId = cfg.tryItBoxContainerId }
-        if (cfg.redocVersion) { this.redocVersion = cfg.redocVersion }
+        if (cfg.redocScriptUrl) { this.redocScriptUrl = cfg.redocScriptUrl }
         if (cfg.authBtn) { this.authBtn = cfg.authBtn }
         if (cfg.tryBtn) { this.tryBtn = cfg.tryBtn }
         if (cfg.stylerMatcher) { this.stylerMatcher = cfg.stylerMatcher }
@@ -56,8 +56,8 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
         return `#${this.tryItBoxContainerId}`;
     }
 
-    public get version(): string {
-        return this.redocVersion;
+    public get redocUrl(): string {
+        return this.redocScriptUrl;
     }
 
     public get containerId(): string {
@@ -73,7 +73,7 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
     }
 
     public get bundleUrl(): string {
-        return `${this.cdnUrl}/redoc@${this.version}/bundles/redoc.standalone.min.js`
+        return this.redocUrl;
     }
 
     public get tryItDependencies(): { jqueryUrl: string, jqueryScrollToUrl: string } {

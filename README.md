@@ -78,7 +78,7 @@ RedocTryItOutOptions extends <i>RedocOptions</i>, documented on [Redoc documenta
 | containerId               | Redoc wrapper container id (used when no element is provided) | string                                            | `'redoc-container'`                       |
 | operationBoxSelector      | Redoc operation box selector                                  | string                                            | `'[data-section-id]'`                     |
 | selectedOperationClass    | Class name added into selected operation                      | string                                            | `'try'`                                   | 
-| redocVersion              | Redoc version                                                 | string                                            | `'2.0.0-rc.56'`                           |
+| redocScriptUrl            | Redoc script url                                                 | string                                            | `'${cdnUrl}/redoc@2.0.0-rc.56/bundles/redoc.standalone.min.js'`                           |
 | authBtn                   | Auth Button Options                                           | [AuthBtnOptions](#auth-button-options)            | [See the table](#auth-button-options)     |
 | tryBtn                    | Try Out Button Options                                        | [TryBtnOptions](#try-button-options)              | [See the table](#try-button-options)      |
 | stylerMatcher             | Styler Matcher Options                                        | [StyleMatcherOptions](#style-matcher-options)     | [See the table](#style-matcher-options)   |
