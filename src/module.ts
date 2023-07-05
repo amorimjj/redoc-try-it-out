@@ -33,7 +33,7 @@ export class RedocTryItOut {
             SwaggerWrapper.cfg = new SwaggerConfig(cfg.swaggerOptions || {}, url, true);
             AuthBtn.cfg = new AuthBtnConfig({ ...cfg.authBtn, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled })
             TryBtn.cfg = new TryBtnConfigConfig({ ...cfg.tryBtn, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled });
-            Styler.cfg = new StyleMatcherConfig({ ...cfg.stylerMatcher, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled }, SwaggerWrapper.cfg, RedocWrapper.cfg);
+            Styler.cfg = new StyleMatcherConfig({ ...cfg.stylerMatcher, url, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { url, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled }, SwaggerWrapper.cfg, RedocWrapper.cfg);
         }
     }
 

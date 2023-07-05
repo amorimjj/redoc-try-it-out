@@ -22,7 +22,7 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
     public options: RedocTryItOutOptions = {};
     public tryBtn: TryBtnOptions = { tryItOutEnabled: false };
     public authBtn: AuthBtnOptions = { tryItOutEnabled: false };
-    public stylerMatcher: StyleMatcherOptions = { tryItOutEnabled: false };
+    public stylerMatcher: StyleMatcherOptions = { tryItOutEnabled: false, url: '' };
 
     public dependenciesVersions: DependenciesVersions = { jquery: '3.6.0', jqueryScrollTo: '2.1.2' };
 

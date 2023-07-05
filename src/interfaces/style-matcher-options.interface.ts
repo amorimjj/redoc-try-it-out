@@ -77,4 +77,5 @@ export interface StyleMatcherOptions {
   authBtnSourceSelector?: string;
   httpVerbSourceSelector?: string;
   tryItOutEnabled: boolean;
+  url: string;
 }
