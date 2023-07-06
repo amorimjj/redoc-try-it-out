@@ -76,4 +76,6 @@ export interface StyleMatcherOptions {
   defaultBorderColorSelector?: string;
   authBtnSourceSelector?: string;
   httpVerbSourceSelector?: string;
+  tryItOutEnabled: boolean;
+  url: string;
 }

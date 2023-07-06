@@ -7,9 +7,11 @@ declare let $: any;
 
 export class StyleMatcherConfig extends Config<StyleMatcherOptions> implements StyleMatcherOptions {
 
+    public readonly url: string;
     private readonly swaggerConfig: SwaggerConfig;
     private readonly redocConfig: RedocTryItOutConfig;
 
+    public readonly tryItOutEnabled: boolean = false;
     private readonly _informationContainerTargetSelector: string    = '.swagger-ui .information-container';
     private readonly _schemeContainerTargetSelector: string         = '.swagger-ui .scheme-container';
     private readonly _modelsContainerTargetSelector: string         = '.swagger-ui .models';
@@ -84,13 +86,16 @@ export class StyleMatcherConfig extends Config<StyleMatcherOptions> implements S
     private readonly _typeSourceSelector: string = '[kind=field] ~ td span'
     private readonly _btnSourceSelector: string =  '[role=tabpanel] button'
     private readonly _defaultBorderColorSelector: string = 'h5';
-    private readonly _authBtnSourceSelector: string = 'a[href*="swagger.json"]:eq(0)';
+    public readonly _authBtnSourceSelector: string = 'a[href*="swagger.json"]:eq(0)';
     private readonly _httpVerbSourceSelector: string = '[data-section-id] .http-verb';
 
     public constructor(cfg:StyleMatcherOptions, swaggerConfig: SwaggerConfig, redocConfig: RedocTryItOutConfig) {
         super(cfg);
         this.swaggerConfig = swaggerConfig;
         this.redocConfig = redocConfig;
+        this.tryItOutEnabled = cfg.tryItOutEnabled;
+        this.url = cfg.url;
+        this._authBtnSourceSelector = `a[href*="${cfg.url}"]:eq(0)`
     }
 
     public get openedInformationContainerTargetSelector(): string {

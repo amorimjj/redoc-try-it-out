@@ -223,7 +223,7 @@ export interface DependenciesVersions {
 }
 
 export interface RedocTryItOutOptions extends RedocOptions {
-  redocVersion?: string;
+  redocScriptUrl?: string;
   tryItOutEnabled?: boolean;
   tryItBoxContainerId?: string;
   containerId?: string;

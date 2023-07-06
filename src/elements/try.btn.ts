@@ -53,6 +53,10 @@ export class TryBtn {
     }
 
     public static init(): void {
+        if (!TryBtn.cfg.tryItOutEnabled) {
+            return;
+        }
+        
         const $tryBtn = $(`<button class="${TryBtn.cfg.className}">${TryBtn.cfg.text}</button>`);
         $tryBtn.click(tryClickHandler);
         TryBtn.$sibling.after($tryBtn);

@@ -31,9 +31,9 @@ export class RedocTryItOut {
 
         if ( RedocWrapper.cfg.tryItOutEnabled ){
             SwaggerWrapper.cfg = new SwaggerConfig(cfg.swaggerOptions || {}, url, true);
-            AuthBtn.cfg = new AuthBtnConfig(cfg.authBtn || {})
-            TryBtn.cfg = new TryBtnConfigConfig(cfg.tryBtn || {});
-            Styler.cfg = new StyleMatcherConfig(cfg.stylerMatcher || {}, SwaggerWrapper.cfg, RedocWrapper.cfg);
+            AuthBtn.cfg = new AuthBtnConfig({ ...cfg.authBtn, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled })
+            TryBtn.cfg = new TryBtnConfigConfig({ ...cfg.tryBtn, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled });
+            Styler.cfg = new StyleMatcherConfig({ ...cfg.stylerMatcher, url, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled } || { url, tryItOutEnabled: RedocWrapper.cfg.tryItOutEnabled }, SwaggerWrapper.cfg, RedocWrapper.cfg);
         }
     }
 
@@ -47,6 +47,7 @@ export class RedocTryItOut {
             TryBtn.init();
             Styler.init();
         } else {
+            await RedocTryItOut.loadDependencies();
             await RedocWrapper.init()
         }
     }

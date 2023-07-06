@@ -3,4 +3,5 @@ export interface TryBtnOptions {
   text?: string;
   className?: string;
   selectedClassName?: string;
+  tryItOutEnabled: boolean;
 }

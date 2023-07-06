@@ -243,9 +243,13 @@ export class Styler {
 
     public static init(): void {
         Styler.hideDisturbingElements();
-        Styler.authApplies();
-        Styler.tryBtnApplies();
-        Styler.themeMatchApplies();
+
+        if (Styler.cfg.tryItOutEnabled) {
+            Styler.authApplies();
+            Styler.tryBtnApplies();
+            Styler.themeMatchApplies();
+        }
+
         Styler.update();
     }
 

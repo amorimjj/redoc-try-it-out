@@ -6,6 +6,17 @@ export class TryBtnConfigConfig extends Config<TryBtnOptions> implements TryBtnO
     public readonly text: string = 'TRY OUT';
     public readonly className: string = 'tryBtn';
     public readonly selectedClassName: string = 'selected';
+    public readonly tryItOutEnabled: boolean = false;
+
+    public constructor(cfg:TryBtnOptions) {
+        super(cfg);
+        this.tryItOutEnabled = cfg.tryItOutEnabled;
+
+        if (cfg.siblingSelector) { this.siblingSelector = cfg.siblingSelector }
+        if (cfg.text) { this.text = cfg.text }
+        if (cfg.className) { this.className = cfg.className }
+        if (cfg.selectedClassName) { this.selectedClassName = cfg.selectedClassName }
+    }
 
     public get selector(): string {
         return `.${this.className}`;
