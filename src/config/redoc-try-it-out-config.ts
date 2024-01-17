@@ -4,6 +4,10 @@ import { InvalidElementError } from '../errors/invalid-element.error';
 
 declare let $: any;
 
+const DEFAULT_REDOC_VERSION = '2.0.0-rc.56';
+const DEFAULT_JQUERY_VERSION = '3.6.0';
+const DEFAULT_JQUERY_SCROLL_VERSION = '2.1.2';
+
 export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements RedocTryItOutOptions {
 
     public readonly docUrl;
@@ -14,13 +18,17 @@ export class RedocTryItOutConfig extends Config<RedocTryItOutOptions> implements
 
     public readonly tryItOutEnabled: boolean = true;
     public readonly tryItBoxContainerId: string = 'try-out-wrapper';
-    public readonly redocVersion: string = '2.0.0-rc.56';
+    public readonly redocVersion: string = DEFAULT_REDOC_VERSION;
     public readonly selectedOperationClass: string = 'try';
 
-    public readonly dependenciesVersions: DependenciesVersions = { jquery: '3.6.0', jqueryScrollTo: '2.1.2' };
+    public readonly dependenciesVersions: DependenciesVersions = { 
+        jquery: DEFAULT_JQUERY_VERSION,
+        jqueryScrollTo: DEFAULT_JQUERY_SCROLL_VERSION
+    };
 
     public constructor(docUrl: string, cfg:RedocTryItOutOptions, element?: HTMLElement) {
         super(cfg);
+        this.redocVersion = cfg.redocVersion || DEFAULT_REDOC_VERSION;
         this.docUrl = docUrl;
         this.element = element;
     }
