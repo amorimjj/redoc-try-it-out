@@ -102,7 +102,7 @@ export class SwaggerConfig extends Config<SwaggerOptions> implements SwaggerOpti
     }
 
     public get cssUrl(): string {
-        return `${this.cdnUrl}swagger-ui-dist@${this.version}/swagger-ui.css`;
+        return `${this.cdnUrl}/swagger-ui-dist@${this.version}/swagger-ui.css`;
     }
 
     public onComplete = () => {

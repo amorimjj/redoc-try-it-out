@@ -1,6 +1,6 @@
 {
-  "name": "redoc-try-it-out",
-  "version": "1.0.9",
+  "name": "redocly-try-it-out",
+  "version": "1.0.12",
   "description": "Using Swagger UI Try It Out function on Redoc",
   "jsdelivr": "./dist/try-it-out.js",
   "main": "dist/index.js",
